@@ -1,0 +1,40 @@
+body
+{
+	font-family: sans-serif;
+}
+
+/* Header */
+
+header
+{
+	margin: 0px;
+	text-align: center;
+	color: grey;
+}
+
+nav 
+{
+	display: flex;
+	justify-content: center;
+	background-color: grey;
+}
+nav a 
+{
+	text-decoration: none;
+	color: white;
+	padding: 14px 16px; 
+}
+
+/* Footer */
+footer
+{
+	display: flex;
+	background-color: grey;
+	color: white;
+	justify-content: space-around;
+}
+.liste
+{
+	display: flex;
+	flex-direction: column;
+}
