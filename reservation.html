@@ -8,61 +8,67 @@
 <h1>Formulaire de réservation</h1>
 
 <form>
-    <label for="name">Nom</label>
-    <br>
-    <input type="text" name="name" placeholder="Jean">
-    <br>
-    <br>
-    
-    <label for="firstName">Prenom</label>
-    <br>
-    <input type="text" name="firstname" placeholder="Dupont">
-    <br>
-    <br>
 
-    <label for="email">Adresse e-mail</label>
-    <br>
-    <input type="text" name="email" placeholder="jean@dupont.fr">
-    <br>
-    <br>
+    <fieldset>
+        <legend>identité:</legend>
 
+        <label for="name">Nom</label>
+        <br>
+        <input type="text" name="name" placeholder="Jean">
+        <br>
+        <br>
+        
+        <label for="firstName">Prenom</label>
+        <br>
+        <input type="text" name="firstname" placeholder="Dupont">
+        <br>
+        <br>
 
-    <label for="phoneNumber">Téléphone</label>
-    <br>
-    <input type="text" name="phoneNumber" placeholder="0123456789">
-    <br>
-    <br>
+        <label for="email">Adresse e-mail</label>
+        <br>
+        <input type="text" name="email" placeholder="jean@dupont.fr">
+        <br>
+        <br>
 
-    <label for="depart">Du</label>
-    <input type="date" name="depart">
-    <label for="retour">au</label>
-    <input type="date" name="retour">
-    <br>
-    <br>
+        <label for="phoneNumber">Téléphone</label>
+        <br>
+        <input type="text" name="phoneNumber" placeholder="0123456789">
+        <br>
+        <br>
+    </fieldset>
 
-    <label for="adultNumber">Nombre d'adultes</label>
-    <br>
-    <input type="number" name="adultNumber" min="1" >
-    <br>
-    <br>
+    <fieldset>
+        <legend>Réservation:</legend>
+        <label for="depart">Du</label>
+        <input type="date" name="depart">
+        <label for="retour">au</label>
+        <input type="date" name="retour">
+        <br>
+        <br>
 
-    <label for="childtNumber">Nombre d'enfants (-12ans)</label>
-    <br>
-    <input type="number" name="childNumber" min="0" >
-    <br>
-    <br>
+        <label for="adultNumber">Nombre d'adultes</label>
+        <br>
+        <input type="number" name="adultNumber" min="1" >
+        <br>
+        <br>
 
-    <label for="breakfast">̈Petit-déjeuner ?</label>
-    <br>
-    <input type="checkbox" name="breakfast" value="true">
-    <br>
-    <br>
+        <label for="childtNumber">Nombre d'enfants (-12ans)</label>
+        <br>
+        <input type="number" name="childNumber" min="0" >
+        <br>
+        <br>
 
-    <label for="demande">Demande de renseignement</label>
-    <br>
-    <textarea name="demande">
-    
-    </textarea> 
+        <label for="breakfast">̈Petit-déjeuner ?</label>
+        <br>
+        <input type="checkbox" name="breakfast" value="true">
+        <br>
+        <br>
+
+        <label for="demande">Demande de renseignement</label>
+        <br>
+        <textarea name="demande">
+        </textarea> 
+    </fieldset>
 
     <br>
     <br>
