@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Agence voyage</title>
-	</head>
-	<body>
-		<h1>Formulaire réservation</h1>
-		<footer>
-			<p>Auteurs</p>
-			<ul>
-				<li><a href="#">Charlotte Pineau</a></li>
-				<li><a href="#">Kilian Decaderincourt</a></li>
-			</ul>
-			<p>Cours de TLI - TP 1</p>
-		</footer>
-	</body>
-</html>
+<head>
+<title>Agence voyage</title>
+</head>
+<body>
+
+<h1>Formulaire de réservation</h1>
+
+<form>
+    <label for="name">Nom</label>
+    <br>
+    <input type="text" name="name" placeholder="Jean">
+    <br>
+    <br>
+    
+    <label for="firstName">Prenom</label>
+    <br>
+    <input type="text" name="firstname" placeholder="Dupont">
+    <br>
+    <br>
+
+    <label for="email">Adresse e-mail</label>
+    <br>
+    <input type="text" name="email" placeholder="jean@dupont.fr">
+    <br>
+    <br>
+
+
+    <label for="phoneNumber">Téléphone</label>
+    <br>
+    <input type="text" name="phoneNumber" placeholder="0123456789">
+    <br>
+    <br>
+
+    <label for="depart">Du</label>
+    <input type="date" name="depart">
+    <label for="retour">au</label>
+    <input type="date" name="retour">
+    <br>
+    <br>
+
+    <label for="adultNumber">Nombre d'adultes</label>
+    <br>
+    <input type="number" name="adultNumber" min="0" >
+    <br>
+    <br>
+
+    <label for="childtNumber">Nombre d'enfants (-12ans)</label>
+    <br>
+    <input type="number" name="childNumber" min="0" >
+    <br>
+    <br>
+
+    <label for="breakfast">̈Petit-déjeuner ?</label>
+    <br>
+    <input type="checkbox" name="breakfast" value="true">
+    <br>
+    <br>
+
+    <label for="demande">Demande de renseignement</label>
+    <br>
+    <textarea name="demande">
+    
+    </textarea> 
+
+    <br>
+    <br>
+    <input type="reset">
+    <input type="submit" value="Réserver">
+</form>
+
+
+</body>
+</html> 
