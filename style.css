@@ -150,3 +150,68 @@ address a:hover {
     color: #3AB2A4;
     opacity: 1;
 }
+
+/* Form */
+
+.row .s6 {
+    width: 48%;
+}
+
+form {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+fieldset {
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 5px;
+    border-color: #3AB2A4;
+    margin-bottom: 5%;
+}
+
+input[type=text],
+input[type=date],
+input[type=tel],
+input[type=number] {
+    border: none;
+    border-bottom: 0.5px solid gray;
+    width: 100%;
+    height: 30px;
+}
+
+textarea {
+    border: none;
+    border-bottom: 0.5px solid gray;
+    width: 100%;
+    height: 30px;
+}
+
+input[type=reset],
+input[type=submit] {
+    text-decoration: none;
+    color: #fff;
+    background-color: #26a69a;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+}
+
+input[type=reset]:disabled,
+input[type=submit]:disabled {
+    text-decoration: none;
+    color: #fff;
+    background-color: gray;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+}
