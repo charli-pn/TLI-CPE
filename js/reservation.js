@@ -120,9 +120,7 @@ window.onload = function() {
         testFormValidity();
     }
 
-    champBreakfast.onchange = () => {
-        testFormValidity();
-    }
+    champBreakfast.onchange = testFormValidity;
 
     // On provoque une vérification au chargement au cas ou le navigateur pré-rempli des champs
     emitChangeOnFormElement()
@@ -160,7 +158,9 @@ function testFormValidity(){
     submitBtn.disabled = !formIsValid;
 
     if(formIsValid){
-        totalPrice.innerHTML = "Prix total: "+getPrice();
+    let totalPrice = getPrice();
+        document.cookie = totalPrice;
+        totalPrice.innerHTML = "Prix total: "+totalPrice;
     } else {
         totalPrice.innerHTML = "";
     }
