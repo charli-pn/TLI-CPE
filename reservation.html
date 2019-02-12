@@ -15,63 +15,66 @@
 				</ul>
 			</nav>
 		</header>
+		<h1 id="voyageTitle">Voyage selectioné: </h1>
 		<form>
 			<fieldset>
 				<legend>Identité:</legend>
 				<label for="name">Nom</label>
 				<br>
-				<input type="text" name="name" placeholder="Jean">
+				<input id="name" type="text" name="name" placeholder="Jean">
 				<br>
 				<br>
 				
 				<label for="firstName">Prenom</label>
 				<br>
-				<input type="text" name="firstname" placeholder="Dupont">
+				<input id="firstName" type="text" name="firstName" placeholder="Dupont">
 				<br>
 				<br>
 				<label for="email">Adresse e-mail</label>
 				<br>
-				<input type="text" name="email" placeholder="jean@dupont.fr">
+				<input id="email" type="text" name="email" placeholder="jean@dupont.fr">
 				<br>
 				<br>
 				<label for="phoneNumber">Téléphone</label>
 				<br>
-				<input type="text" name="phoneNumber" placeholder="0123456789">
+				<input id="phoneNumber" type="text" name="phoneNumber" placeholder="0123456789">
 				<br>
 				<br>
 			</fieldset>
 			<fieldset>
 				<legend>Réservation:</legend>
 				<label for="depart">Du</label>
-				<input type="date" name="depart">
+				<input id="depart" type="date" name="depart">
 				<label for="retour">au</label>
-				<input type="date" name="retour">
+				<input id="retour" type="date" name="retour">
 				<br>
 				<br>
 				<label for="adultNumber">Nombre d'adultes</label>
 				<br>
-				<input type="number" name="adultNumber" min="1" >
+				<input id="adultNumber" type="number" name="adultNumber" min="1" >
 				<br>
 				<br>
-				<label for="childtNumber">Nombre d'enfants (-12ans)</label>
+				<label for="childNumber">Nombre d'enfants (-12ans)</label>
 				<br>
-				<input type="number" name="childNumber" min="0" >
+				<input id="childNumber" type="number" name="childNumber" min="0" >
 				<br>
 				<br>
 				<label for="breakfast">̈Petit-déjeuner ?</label>
 				<br>
-				<input type="checkbox" name="breakfast" value="true">
+				<input id="breakfast" type="checkbox" name="breakfast" value="true">
 				<br>
 				<br>
 				<label for="demande">Demande de renseignement</label>
 				<br>
-				<textarea name="demande">
+				<textarea id="demande" name="demande">
 				</textarea>
 			</fieldset>
 			<br>
 			<br>
-			<input type="reset">
-			<input type="submit" value="Réserver">
+			<input id="reset" type="reset">
+			<input id="submit" type="submit" value="Réserver">
 		</form>
 	</body>
+
+	<script src="js/reservation.js"></script>
 </html>
