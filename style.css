@@ -20,8 +20,8 @@ h1 {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 a:hover {
@@ -40,15 +40,15 @@ a:hover {
 /* Header */
 
 header {
-    text-align: center;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 nav {
     background-color: #3AB2A4;
+    box-shadow: 0 5px 10px #FFAB86;
     display: flex;
     justify-content: center;
-    box-shadow: 0 5px 10px #FFAB86;
 }
 
 nav a {
@@ -68,9 +68,9 @@ footer {
     color: white;
     display: flex;
     justify-content: space-around;
+    margin-top: auto;
     padding: 10px;
     text-align: center;
-    margin-top: auto;
 }
 
 footer a {
@@ -108,7 +108,6 @@ footer a {
     text-align: center;
 }
 
-.card-content h3 {}
 
 
 .card-action {
@@ -117,7 +116,6 @@ footer a {
     margin-top: auto;
     padding: 10px;
     text-align: center;
-
 }
 
 .row {
@@ -152,6 +150,16 @@ address a:hover {
 }
 
 /* Form */
+
+.valid {
+    color: green;
+    border-color: green;
+}
+
+.invalid {
+    color: red;
+    border-color: red;
+}
 
 .row .s6 {
     width: 48%;
