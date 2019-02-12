@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Agence voyage</title>
     <meta charset="utf-8">
@@ -20,6 +19,7 @@
     </header>
     <form>
         <h1 id="voyageTitle">Voyage selectionné: </h1>
+        <h1 id="voyagePrice">Prix par jour par adulte: </h1>
         <fieldset>
             <legend>Identité:</legend>
             <div class="row">
@@ -84,6 +84,8 @@
         </fieldset>
         <br>
         <br>
+			<h2 id="totalPrice"></h2>
+			<br>
         <div class="row">
             <div class="s6"></div>
             <div class="s6">
@@ -105,6 +107,9 @@
     </footer>
 </body>
 
-<script src="js/reservation.js"></script>
+<script src="js/voyage.js"></script>
+	<script src="js/reservation.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/priceCalculator.js"></script>
 
 </html>
