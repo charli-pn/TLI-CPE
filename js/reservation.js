@@ -1,6 +1,10 @@
 // Formulaire
 var formIsValid = false;
 
+// Détails du voyage
+var voyageTitle;
+var voyagePrice;
+
 // Nom
 var champName;
 var nameIsValid = false;
@@ -36,8 +40,10 @@ var champBreakfast;
 var champDemande;
 
 // Bouton submit
-var submitBtn
+var submitBtn;
 
+// Voyage selectionné
+var selectedVoyage;
 
 window.onload = function() {
     main();
@@ -47,17 +53,32 @@ window.onload = function() {
 
     champName = document.getElementById('name');
     champFirstName = document.getElementById('firstName');
-    champEmail = document.getElementById('email')
+    champEmail = document.getElementById('email');
     champPhoneNumber = document.getElementById('phoneNumber');
-    champDepart = document.getElementById('depart')
-    champRetour = document.getElementById('retour')
-    champAdultNumber = document.getElementById('adultNumber')
-    champChildNumber = document.getElementById('childNumber')
-    champBreakfast = document.getElementById('breakfast')
-    champDemande = document.getElementById('demande')
+    champDepart = document.getElementById('depart');
+    champRetour = document.getElementById('retour');
+    champAdultNumber = document.getElementById('adultNumber');
+    champChildNumber = document.getElementById('childNumber');
+    champBreakfast = document.getElementById('breakfast');
+    champDemande = document.getElementById('demande');
+
+    var totalPrice = document.getElementById('totalPrice');
 
     submitBtn = document.getElementById('submit');
+    voyageTitle = document.getElementById("voyageTitle");
+    voyagePrice = document.getElementById("voyagePrice");
 
+
+    // On récupère l'id du voyage selectioné dans l'url
+    let voyageId = new URLSearchParams(window.location.search).get("voyageId");
+    if(voyageId===null)voyageId = 0;
+    let voyageArray = getVoyageArray();
+
+    selectedVoyage = voyageArray[voyageId];
+
+    // On met à jour les informations sur la page concernant le voyage selectioné
+    voyageTitle.innerHTML = "Voyage selectionné: " + selectedVoyage.title;
+    voyagePrice.innerHTML = "Prix par jour par adulte: " + selectedVoyage.price;
 
     champName.onchange = () => {
         // Regex alphanumeric
@@ -94,8 +115,12 @@ window.onload = function() {
     }
 
     champChildNumber.onchange = () => {
-        let childCount = champAdultNumber.value;
+        let childCount = champChildNumber.value;
         childNumberIsValid = (childCount!="")
+        testFormValidity();
+    }
+
+    champBreakfast.onchange = () => {
         testFormValidity();
     }
 
@@ -133,6 +158,12 @@ function testFormValidity(){
     formIsValid = nameIsValid && firstNameIsValid && emailIsValid && adultNumberIsValid && childNumberIsValid && dateAreValid;
     
     submitBtn.disabled = !formIsValid;
+
+    if(formIsValid){
+        totalPrice.innerHTML = "Prix total: "+getPrice();
+    } else {
+        totalPrice.innerHTML = "";
+    }
 
 }
 

@@ -16,6 +16,7 @@
 			</nav>
 		</header>
 		<h1 id="voyageTitle">Voyage selectioné: </h1>
+		<h1 id="voyagePrice">Prix par jour par adulte: </h1>
 		<form>
 			<fieldset>
 				<legend>Identité:</legend>
@@ -71,10 +72,15 @@
 			</fieldset>
 			<br>
 			<br>
+			<h2 id="totalPrice"></h2>
+			<br>
 			<input id="reset" type="reset">
 			<input id="submit" type="submit" value="Réserver">
 		</form>
 	</body>
 
+	<script src="js/voyage.js"></script>
 	<script src="js/reservation.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/priceCalculator.js"></script>
 </html>
