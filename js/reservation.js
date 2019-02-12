@@ -45,11 +45,11 @@ var submitBtn;
 // Voyage selectionné
 var selectedVoyage;
 
-window.onload = function() {
+window.onload = function () {
     main();
-  };
+};
 
-  function main(){
+function main() {
 
     champName = document.getElementById('name');
     champFirstName = document.getElementById('firstName');
@@ -71,7 +71,7 @@ window.onload = function() {
 
     // On récupère l'id du voyage selectioné dans l'url
     let voyageId = new URLSearchParams(window.location.search).get("voyageId");
-    if(voyageId===null)voyageId = 0;
+    if (voyageId === null) voyageId = 0;
     let voyageArray = getVoyageArray();
 
     selectedVoyage = voyageArray[voyageId];
@@ -81,42 +81,63 @@ window.onload = function() {
     voyagePrice.innerHTML = "Prix par jour par adulte: " + selectedVoyage.price;
 
     champName.onchange = () => {
+        champName.classList.remove("valid");
+        champName.classList.remove("invalid");
         // Regex alphanumeric
-        nameIsValid = champName.value.match(/^[a-zA-Z]+$/)!== null;
+        nameIsValid = champName.value.match(/^[a-zA-Z]+$/) !== null;
+        nameIsValid ? champName.classList.add("valid") : champName.classList.add("invalid");
         testFormValidity();
     }
 
     champFirstName.onchange = () => {
+        champFirstName.classList.remove("valid");
+        champFirstName.classList.remove("invalid");
         // Regex alphanumeric
-        firstNameIsValid = champFirstName.value.match(/^[a-zA-Z]+$/)!== null;
+        firstNameIsValid = champFirstName.value.match(/^[a-zA-Z]+$/) !== null;
+        firstNameIsValid ? champFirstName.classList.add("valid") : champFirstName.classList.add("invalid");
         testFormValidity();
     }
 
     champEmail.onchange = () => {
+        champEmail.classList.remove("valid");
+        champEmail.classList.remove("invalid");
         // Regex de validation email simplifié
-        emailIsValid = champEmail.value.match(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+$/)!== null;
+        emailIsValid = champEmail.value.match(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+$/) !== null;
+        emailIsValid ? champEmail.classList.add("valid") : champEmail.classList.add("invalid");
         testFormValidity();
     }
 
     champDepart.onchange = () => {
+        champDepart.classList.remove("valid");
+        champDepart.classList.remove("invalid");
         testDepartRetourValidity();
+        dateAreValid ? champDepart.classList.add("valid") : champDepart.classList.add("invalid");
         testFormValidity();
     }
 
     champRetour.onchange = () => {
+        champRetour.classList.remove("valid");
+        champRetour.classList.remove("invalid");
         testDepartRetourValidity();
+        dateAreValid ? champRetour.classList.add("valid") : champRetour.classList.add("invalid");
         testFormValidity();
     }
 
     champAdultNumber.onchange = () => {
+        champAdultNumber.classList.remove("valid");
+        champAdultNumber.classList.remove("invalid");
         let adultCount = champAdultNumber.value;
-        adultNumberIsValid = (adultCount!="" && adultCount>0)
+        adultNumberIsValid = (adultCount != "" && adultCount > 0)
+        adultNumberIsValid ? champAdultNumber.classList.add("valid") : champAdultNumber.classList.add("invalid");
         testFormValidity();
     }
 
     champChildNumber.onchange = () => {
+        champChildNumber.classList.remove("valid");
+        champChildNumber.classList.remove("invalid");
         let childCount = champChildNumber.value;
-        childNumberIsValid = (childCount!="")
+        childNumberIsValid = (childCount != "")
+        childNumberIsValid ? champChildNumber.classList.add("valid") : champChildNumber.classList.add("invalid");
         testFormValidity();
     }
 
@@ -124,13 +145,13 @@ window.onload = function() {
 
     // On provoque une vérification au chargement au cas ou le navigateur pré-rempli des champs
     emitChangeOnFormElement()
-  }
+}
 
 // Test la date de départ et de retour
-function testDepartRetourValidity(){
+function testDepartRetourValidity() {
     dateAreValid = false;
 
-    if(champDepart.value==="" || champRetour.value ===""){
+    if (champDepart.value === "" || champRetour.value === "") {
         //Un des deux date n'a pas été saisie
         return;
     }
@@ -138,13 +159,13 @@ function testDepartRetourValidity(){
     let dateDepart = new Date(champDepart.value);
     let dateRetour = new Date(champRetour.value);
 
-    if(dateDepart < new Date()){
+    if (dateDepart < new Date()) {
         //La date de départ est dans le passé
         return;
     }
 
 
-    if(dateDepart >= dateRetour){
+    if (dateDepart >= dateRetour) {
         // La date de départ est après la date de retour
         dateAreValid = false;
     }
@@ -152,13 +173,14 @@ function testDepartRetourValidity(){
     dateAreValid = true;
 }
 
-function testFormValidity(){
+function testFormValidity() {
     formIsValid = nameIsValid && firstNameIsValid && emailIsValid && adultNumberIsValid && childNumberIsValid && dateAreValid;
-    
+
     submitBtn.disabled = !formIsValid;
 
+
     if(formIsValid){
-    let totalPrice = getPrice();
+        let totalPrice = getPrice();
         document.cookie = totalPrice;
         totalPrice.innerHTML = "Prix total: "+totalPrice;
     } else {
@@ -167,7 +189,7 @@ function testFormValidity(){
 
 }
 
-function emitChangeOnFormElement(){
+function emitChangeOnFormElement() {
     // On provoque l'emission d'un event change manuellement sur certains champs
     // C'est utilise en cas de rechargement de page si le navigateur prérempli des champs
     let eventChange = new Event("change");

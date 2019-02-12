@@ -20,8 +20,8 @@ h1 {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 a:hover {
@@ -40,15 +40,15 @@ a:hover {
 /* Header */
 
 header {
-    text-align: center;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 nav {
     background-color: #3AB2A4;
+    box-shadow: 0 5px 10px #FFAB86;
     display: flex;
     justify-content: center;
-    box-shadow: 0 5px 10px #FFAB86;
 }
 
 nav a {
@@ -68,9 +68,9 @@ footer {
     color: white;
     display: flex;
     justify-content: space-around;
+    margin-top: auto;
     padding: 10px;
     text-align: center;
-    margin-top: auto;
 }
 
 footer a {
@@ -108,7 +108,6 @@ footer a {
     text-align: center;
 }
 
-.card-content h3 {}
 
 
 .card-action {
@@ -117,7 +116,6 @@ footer a {
     margin-top: auto;
     padding: 10px;
     text-align: center;
-
 }
 
 .row {
@@ -149,4 +147,79 @@ address a {
 address a:hover {
     color: #3AB2A4;
     opacity: 1;
+}
+
+/* Form */
+
+.valid {
+    color: green;
+    border-color: green;
+}
+
+.invalid {
+    color: red;
+    border-color: red;
+}
+
+.row .s6 {
+    width: 48%;
+}
+
+form {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+fieldset {
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 5px;
+    border-color: #3AB2A4;
+    margin-bottom: 5%;
+}
+
+input[type=text],
+input[type=date],
+input[type=tel],
+input[type=number] {
+    border: none;
+    border-bottom: 0.5px solid gray;
+    width: 100%;
+    height: 30px;
+}
+
+textarea {
+    border: none;
+    border-bottom: 0.5px solid gray;
+    width: 100%;
+    height: 30px;
+}
+
+input[type=reset],
+input[type=submit] {
+    text-decoration: none;
+    color: #fff;
+    background-color: #26a69a;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+}
+
+input[type=reset]:disabled,
+input[type=submit]:disabled {
+    text-decoration: none;
+    color: #fff;
+    background-color: gray;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
 }
