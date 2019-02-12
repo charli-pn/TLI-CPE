@@ -1,40 +1,64 @@
-body
-{
-	font-family: sans-serif;
+body {
+    font-family: sans-serif;
 }
 
 /* Header */
 
-header
-{
-	margin: 0px;
-	text-align: center;
-	color: grey;
+header {
+    color: gray;
+    text-align: center;
 }
 
-nav 
-{
-	display: flex;
-	justify-content: center;
-	background-color: grey;
+nav {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
 }
-nav a 
-{
-	text-decoration: none;
-	color: white;
-	padding: 14px 16px; 
+
+nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 /* Footer */
-footer
-{
-	display: flex;
-	background-color: grey;
-	color: white;
-	justify-content: space-around;
+footer {
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: space-around;
 }
-.liste
-{
-	display: flex;
-	flex-direction: column;
+
+.liste {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: 0.3s;
+    width: 25%;
+}
+
+.card-image img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+/*
+.card-action {}
+*/
+
+.row {
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
