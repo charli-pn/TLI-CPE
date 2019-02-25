@@ -42,17 +42,17 @@ function connexion() {
 
     if (reconnu === true){
         if (valide === true) {
-            document.getElementById("info").innerHTML = "<p>Vous êtes identifié</p><br>";
+            document.getElementById("info").textContent = "Vous êtes identifié";
+            document.cookie = "username="+username;
+            document.cookie = "connected=true";
+            document.location.href="index.html";
         } else {
-            document.getElementById("info").innerHTML = "<p>Mauvais mot de passe</p><br>";
+            document.getElementById("info").textContent = "Mauvais mot de passe";
             document.getElementById("password").value = "";
         }
     } else {
-        document.getElementById("info").innerHTML = "<p>Identifiants inconnus</p><br>";
+        document.getElementById("info").textContent = "Identifiants inconnus";
         document.getElementById("username").value = "";
         document.getElementById("password").value = "";
     }
 }
-
-window.onload = function () {
-};
