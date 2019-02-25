@@ -9,42 +9,57 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="contact.html">A propos</a>
-        </nav>
-        
-        <h1>TTA - Time travel Agency</h1>
-        <p>Des voyages à tout moment !</p>
-    </header>
-    
-    <div class="destinations">
-        <h2>Les destinations proposés</h2>
+<header>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">A propos</a>
+    </nav>
 
-        <form id="filters">
-            <input type="number" id="minPrice" min="0">
-            <input type="number" id="maxPrice" min="0">
-            <input type="checkbox" id="breakfastIncluded">
-            <label for="breakfastIncluded">Petit déjeuner</label>
-            <input type="checkbox" id="acceptChildren">
-            <label for="acceptChildren">Enfants acceptés</label>
-        </form>
+    <h1>TTA - Time travel Agency</h1>
+    <p>Des voyages à tout moment !</p>
+</header>
 
-        <div class="row" id="destinations-cards">
-            
-        </div>
-    </div>
-    <footer>
-        <div>
-            <p>Auteurs</p>
-            <div class="liste">
-                <a href="#">Charlotte Pineau</a>
-                <a href="#">Kilian Decaderincourt</a>
+<div class="destinations">
+    <h2>Les destinations proposés</h2>
+
+    <form id="filters">
+        <div class="row">
+            <div class="s6">
+                <label for="minPrice">Prix minimum</label>
+                <input type="number" id="minPrice" min="0">
+            </div>
+            <div class="s6">
+                <label for="maxPrice">Prix maximum</label>
+                <input type="number" id="maxPrice" min="0">
             </div>
         </div>
-        <p>Cours de TLI - TP 1</p>
-    </footer>
+        <br>
+        <div class="row">
+            <div class="s6">
+                <input type="checkbox" id="breakfastIncluded">
+                <label for="breakfastIncluded">Petit déjeuner</label>
+            </div>
+            <div class="s6">
+                <input type="checkbox" id="acceptChildren">
+                <label for="acceptChildren">Enfants acceptés</label>
+            </div>
+        </div>
+    </form>
+
+    <div class="row" id="destinations-cards">
+
+    </div>
+</div>
+<footer>
+    <div>
+        <p>Auteurs</p>
+        <div class="liste">
+            <a href="#">Charlotte Pineau</a>
+            <a href="#">Kilian Decaderincourt</a>
+        </div>
+    </div>
+    <p>Cours de TLI - TP 1</p>
+</footer>
 </body>
 <script src="js/index.js"></script>
 <script src="js/voyage.js"></script>

@@ -245,3 +245,17 @@ button[type=submit]:disabled {
     padding: 0 16px;
     text-transform: uppercase;
 }
+
+#filters {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 5px 5px gray;
+    width: 30%;
+    margin-bottom: 30px;
+    margin-left: 35%;
+    border-radius: 3px;
+    background-color: #3AB2A4;
+}
