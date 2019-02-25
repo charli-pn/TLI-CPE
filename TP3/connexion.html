@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Agence voyage</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Connexion</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
 </head>
-
 <body>
     <header>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="contact.html">A propos</a>
         </nav>
-        
+
         <h1>TTA - Time travel Agency</h1>
         <p>Des voyages à tout moment !</p>
     </header>
-    
-    <div class="destinations">
-        <h2>Les destinations proposés</h2>
+    <div id="connexion">
+        <label for="username">Nom d'utilisateur</label>
+        <br>
+        <input id="username" type="text" name="username" placeholder="Entrez votre nom d'utilisateur">
+        <br>
+        <br>
 
-        <form id="filters">
-            <input type="number" id="minPrice" min="0">
-            <input type="number" id="maxPrice" min="0">
-            <input type="checkbox" id="breakfastIncluded">
-            <label for="breakfastIncluded">Petit déjeuner</label>
-            <input type="checkbox" id="acceptChildren">
-            <label for="acceptChildren">Enfants acceptés</label>
-        </form>
+        <label for="password">Mot de passe</label>
+        <br>
+        <input id="password" type="password" name="password" placeholder="Entrez votre mot de passe">
+        <br>
+        <br>
 
-        <div class="row" id="destinations-cards">
-            
+        <div id="info">
         </div>
+        <input id="submit" type="submit" name="submit" onclick="connexion()">
+        <br>
     </div>
     <footer>
         <div>
@@ -46,6 +45,5 @@
         <p>Cours de TLI - TP 1</p>
     </footer>
 </body>
-<script src="js/index.js"></script>
-<script src="js/voyage.js"></script>
+<script src="js/user.js"></script>
 </html>

@@ -149,6 +149,25 @@ address a:hover {
     opacity: 1;
 }
 
+/* Connexion */
+#connexion {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 5px 5px gray;
+    width: 30%;
+    margin-bottom: 30px;
+    margin-left: 35%;
+    border-radius: 3px;
+    background-color: #FFAB86;
+}
+
+#connexion input[type=text], #connexion input[type=password]{
+    text-align: center;
+}
+
 /* Form */
 
 .valid {
@@ -180,6 +199,7 @@ fieldset {
 }
 
 input[type=text],
+input[type=password],
 input[type=date],
 input[type=tel],
 input[type=number] {
