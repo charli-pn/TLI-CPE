@@ -18,7 +18,7 @@
         <h1>TTA - Time travel Agency</h1>
         <p>Des voyages à tout moment !</p>
     </header>
-    <form action="recap.html">
+    <form>
         <h1 id="voyageTitle">Voyage selectionné: </h1>
         <h1 id="voyagePrice">Prix par jour par adulte: </h1>
         <fieldset>
@@ -91,7 +91,7 @@
             <div class="s6"></div>
             <div class="s6">
                 <input id="reset" type="reset">
-                <input id="submit" type="submit" value="Réserver">
+                <button id="submit" type="submit">Réserver</button>
             </div>
         </div>
     </form>
@@ -109,7 +109,7 @@
 </body>
 
 <script src="js/voyage.js"></script>
-<script src="js/reservation.js"></script>
+<script type="module" src="js/reservation.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/priceCalculator.js"></script>
 

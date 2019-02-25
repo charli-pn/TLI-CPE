@@ -1,3 +1,6 @@
+import { Customer } from 'models/Customer';
+import { Order } from 'models/Order';
+
 // Formulaire
 var formIsValid = false;
 
@@ -141,6 +144,10 @@ function main() {
         testFormValidity();
     }
 
+    submitBtn.onclick = function () {
+        if(formIsValid) submitForm();
+    }
+
     champBreakfast.onchange = testFormValidity;
 
     // On provoque une vérification au chargement au cas ou le navigateur pré-rempli des champs
@@ -200,4 +207,29 @@ function emitChangeOnFormElement() {
     champAdultNumber.dispatchEvent(eventChange);
     champChildNumber.dispatchEvent(eventChange);
     champEmail.dispatchEvent(eventChange);
+}
+
+function submitForm(){
+
+    let name = champName.value;
+    let firstName = champFirstName.value;
+    let email = champEmail.value;
+    let phone = champPhoneNumber.value;
+
+    let customer = new Customer(name, firstName, email, phone);
+
+    let dateDepart = new Date(champDepart.value);
+    let dateRetour = new Date(champRetour.value);
+    let adultNumber = champAdultNumber.value;
+    let childNumber = champChildNumber.value;
+    let breakfast = champBreakfast.checked;
+
+    let voyage = selectedVoyage;
+
+    //todo créer l'order
+    //let order = new Order();
+
+    
+
+
 }
