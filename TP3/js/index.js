@@ -12,7 +12,6 @@ window.onload = function () {
 
 function main(){
     const voyageArray = getVoyageArray();
-    printCards(voyageArray);
     
     filtersForm.onchange = function (){
         let filteredVoyages = filterVoyages(voyageArray)
@@ -22,6 +21,8 @@ function main(){
             printCards(filteredVoyages);
         }
     }
+
+    filtersForm.dispatchEvent(new Event('change'));
     
 
     
