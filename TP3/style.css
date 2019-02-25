@@ -217,7 +217,8 @@ textarea {
 }
 
 input[type=reset],
-input[type=submit] {
+input[type=submit],
+button[type=submit] {
     text-decoration: none;
     color: #fff;
     background-color: #26a69a;
@@ -231,7 +232,8 @@ input[type=submit] {
 }
 
 input[type=reset]:disabled,
-input[type=submit]:disabled {
+input[type=submit]:disabled,
+button[type=submit]:disabled {
     text-decoration: none;
     color: #fff;
     background-color: gray;
