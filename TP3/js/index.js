@@ -1,25 +1,74 @@
+const destinationsCards = document.getElementById("destinations-cards");
+const filtersForm = document.getElementById("filters");
+
+const maxPriceInput = document.getElementById("maxPrice");
+const minPriceInput = document.getElementById("minPrice");
+
+const breakfastIncludedInput = document.getElementById("breakfastIncluded");
+const acceptChildrenInput = document.getElementById("acceptChildren");
 window.onload = function () {
     main();
 };
 
 function main(){
     const voyageArray = getVoyageArray();
-
-    const destinationsCards = document.getElementById("destinations-cards");
-
-    let voyagesCardHTML = "";
-
-    for (let i=0; i<voyageArray.length; i++){
+    printCards(voyageArray);
+    
+    filtersForm.onchange = function (){
+        let filteredVoyages = filterVoyages(voyageArray)
+        if(filteredVoyages.length===0){
+            printNotFound()
+        } else {
+            printCards(filteredVoyages);
+        }
+    }
+    
 
     
+}
+
+function filterVoyages(voyageArray){
+
+    let maxPrice = maxPriceInput.value;
+    let minPrice = minPriceInput.value;
+    let breakfastIncluded = breakfastIncludedInput.checked;
+    let acceptChildren = acceptChildrenInput.checked;
+
+    filteredArray = []
+    for (let i=0; i<voyageArray.length; i++){
+        if(checkVoyageIsCompatible(voyageArray[i], minPrice, maxPrice, breakfastIncluded, acceptChildren)){
+            
+            filteredArray.push(voyageArray[i]);
+        }
+    }
+    return filteredArray;
+}
+
+function checkVoyageIsCompatible(voyage, minPrice, maxPrice, breakfastIncluded, acceptChildren){
+
+    if(minPrice && voyage.price < minPrice) return false;
+    if(maxPrice && voyage.price > maxPrice) return false;
+    if(breakfastIncluded && !voyage.breakfastIncluded) return false;
+    if(acceptChildren && !voyage.acceptChildren) return false;
+
+    return true;
+
+
+}
+
+function printCards(voyageArray){
+    let voyagesCardHTML = "";
+    for (let i=0; i<voyageArray.length; i++){
         voyagesCardHTML += generateVoyageCardHTML(voyageArray[i]);
     }
     destinationsCards.innerHTML =voyagesCardHTML;
 }
 
-function generateVoyageCardHTML(voyage){
+function printNotFound(){
+    destinationsCards.innerHTML ="Aucun voyage ne correspond à votre recherche";
+}
 
-    console.log(voyage);
+function generateVoyageCardHTML(voyage){
 
     let cardHtml = "<div class=\"card\">"
     cardHtml+= "<div class=\"card-image\">"

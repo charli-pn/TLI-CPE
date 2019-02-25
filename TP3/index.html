@@ -21,6 +21,16 @@
     
     <div class="destinations">
         <h2>Les destinations proposés</h2>
+
+        <form id="filters">
+            <input type="number" id="minPrice" min="0">
+            <input type="number" id="maxPrice" min="0">
+            <input type="checkbox" id="breakfastIncluded">
+            <label for="breakfastIncluded">Petit déjeuner</label>
+            <input type="checkbox" id="acceptChildren">
+            <label for="acceptChildren">Enfants acceptés</label>
+        </form>
+
         <div class="row" id="destinations-cards">
             
             <div class="card">
