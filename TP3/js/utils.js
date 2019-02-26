@@ -20,3 +20,10 @@ function getCookie(cname) {
     }
     return "";
 }
+
+function setCookie(cname, ccontent){
+
+    if(cname && ccontent){
+        document.cookie = cname+'='+ccontent;
+    }
+}

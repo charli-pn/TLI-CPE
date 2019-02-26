@@ -1,3 +1,6 @@
+import { Voyage } from './voyage.js';
+
+
 const destinationsCards = document.getElementById("destinations-cards");
 const filtersForm = document.getElementById("filters");
 
@@ -6,12 +9,13 @@ const minPriceInput = document.getElementById("minPrice");
 
 const breakfastIncludedInput = document.getElementById("breakfastIncluded");
 const acceptChildrenInput = document.getElementById("acceptChildren");
+
 window.onload = function () {
     main();
 };
 
 function main(){
-    const voyageArray = getVoyageArray();
+    const voyageArray = Voyage.prototype.getVoyageArray();
     
     filtersForm.onchange = function (){
         let filteredVoyages = filterVoyages(voyageArray)
@@ -35,7 +39,7 @@ function filterVoyages(voyageArray){
     let breakfastIncluded = breakfastIncludedInput.checked;
     let acceptChildren = acceptChildrenInput.checked;
 
-    filteredArray = []
+    let filteredArray = []
     for (let i=0; i<voyageArray.length; i++){
         if(checkVoyageIsCompatible(voyageArray[i], minPrice, maxPrice, breakfastIncluded, acceptChildren)){
             
