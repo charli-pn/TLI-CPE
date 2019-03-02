@@ -3,7 +3,7 @@ import {User} from "./user.js";
 class Order {
 
 
-    constructor(orderId, userId, voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request){
+    constructor(voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request, totalPrice){
 
         this.orderId = Order.getNextId();
         this.userId = User.getLoggedUser().userId;
@@ -15,6 +15,7 @@ class Order {
         this.childNumber = childNumber;
         this.breakfast = breakfast;
         this.request = request;
+        this.totalPrice = totalPrice;
 
     
 
@@ -45,6 +46,21 @@ class Order {
         var ordersAsString = JSON.stringify(ordersArray);
 
         localStorage.setItem("ordersArray", ordersAsString);
+    }
+
+    static getOrdersById(id){
+        var ordersArray = Order.getOrders();
+
+        var filteredArray = [];
+
+        ordersArray.forEach(element => {
+            
+            if(element.userId == id){
+                
+                filteredArray.push(element);
+            }
+        });
+        return filteredArray;
     }
 
 }

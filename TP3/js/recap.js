@@ -1,3 +1,6 @@
+import {User} from "./models/user.js";
+import {Order} from "./models/order.js";
+
 window.onload = function() {
     main();
   };
@@ -15,24 +18,31 @@ function main(){
     var champChildNumber = document.getElementById('childNumber');
     var champBreakfast = document.getElementById('breakfast');
     var champDemande = document.getElementById('demande');
-
     var champTotalPrice = document.getElementById('totalPrice');
 
-    let usp = new URLSearchParams(window.location.search);
+    var userId = User.getLoggedUser().userId;
+    var ordersArray = Order.getOrdersById(userId);
 
-    champName.innerHTML = usp.get("name");
-    champFirstName.innerHTML = usp.get("firstName");
-    champEmail.innerHTML = usp.get("email");
-    champPhoneNumber.innerHTML = usp.get("phoneNumber");
+    if(ordersArray.length == 0){
+      location.href = "index.html";
+    }
 
-    champDepart.innerHTML = usp.get("depart");
-    champRetour.innerHTML = usp.get("retour");
-    champAdultNumber.innerHTML = usp.get("adultNumber");
-    champChildNumber.innerHTML = usp.get("childNumber");
-    champBreakfast.innerHTML = usp.get("breakfast");
-    champDemande.innerHTML = usp.get("demande");
+    var lastOrder = ordersArray[ordersArray.length-1];
+    console.log(lastOrder)
 
-    champTotalPrice.innerHTML = document.cookie;
+    champName.innerHTML = lastOrder.customer.name
+    champFirstName.innerHTML = lastOrder.customer.firstName
+    champEmail.innerHTML = lastOrder.customer.email
+    champPhoneNumber.innerHTML = lastOrder.customer.phoneNumber
+
+    champDepart.innerHTML = lastOrder.dateDepart
+    champRetour.innerHTML = lastOrder.dateRetour
+    champAdultNumber.innerHTML = lastOrder.adultNumber
+    champChildNumber.innerHTML = lastOrder.childNumber
+    champBreakfast.innerHTML = lastOrder.breakfast ? "Oui" : "Non"
+    champDemande.innerHTML = lastOrder.request
+
+    champTotalPrice.innerHTML = lastOrder.totalPrice
 
 }
 
