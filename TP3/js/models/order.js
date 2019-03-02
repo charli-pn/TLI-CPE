@@ -1,8 +1,9 @@
 class Order {
 
+
     constructor(orderId, userId, voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request){
 
-        this.orderId = orderId;
+        this.orderId = Order.getNextId();
         this.userId = userId;
         this.voyage = voyage;
         this.customer = customer;
@@ -13,27 +14,35 @@ class Order {
         this.breakfast = breakfast;
         this.request = request;
 
+    
+
+    }
+
+    static getNextId(){
+        var ordersArray = Order.getOrders();
+        var maxId = -1;
+
+        ordersArray.forEach(element => {
+            if(element.orderId>maxId) maxId = element.orderId;
+        });
+        
+        return ++maxId;
     }
 
     static getOrders(){
-        var ordersCookie = getCookie("ordersArray")
-        if(ordersCookie==""){
+        var ordersLocalStorage = localStorage.getItem("ordersArray")
+        if(ordersLocalStorage === null || ordersLocalStorage==""){
             return [];
         }
-        return JSON.parse(ordersCookie);
+        return JSON.parse(ordersLocalStorage);
     }
 
     static addOrder(order){
         var ordersArray = Order.getOrders();
-
         ordersArray.push(order);
-
-
         var ordersAsString = JSON.stringify(ordersArray);
 
-        setCookie("ordersArray", ordersAsString);
-
-
+        localStorage.setItem("ordersArray", ordersAsString);
     }
 
 }

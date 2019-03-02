@@ -15,7 +15,7 @@ window.onload = function () {
 };
 
 function main(){
-    const voyageArray = Voyage.prototype.getVoyageArray();
+    const voyageArray = Voyage.getVoyageArray();
     
     filtersForm.onchange = function (){
         let filteredVoyages = filterVoyages(voyageArray)

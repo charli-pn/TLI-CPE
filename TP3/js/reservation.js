@@ -174,10 +174,13 @@ function testDepartRetourValidity() {
         return;
     }
 
-
+    
     if (dateDepart > dateRetour) {
         // La date de départ est après la date de retour
-        dateAreValid = false;
+        return;
+    }
+
+    if(differenceBetweenTwoDateInDays(dateDepart, dateRetour)==0){
         return;
     }
 
@@ -250,10 +253,5 @@ function submitForm(){
     var order = new Order(orderId, userId, voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request);
 
     Order.addOrder(order);
-
-    console.log(order);
-
-    
-
 
 }

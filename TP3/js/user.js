@@ -1,58 +1,50 @@
-class User {
-    constructor(id, username, password){
-        this.id = id;
-        this.username = username;
-        this.password = password;
-    }
-}
+import { User } from './models/User.js';
 
-function getUserArray() {
-    let UserArray = [];
-
-    UserArray.push(
-        new User(0, "anon", "pwd")
-    );
-
-    UserArray.push(
-        new User(1, "master", "pwd")
-    );
-
-    UserArray.push(
-        new User(2, "kilian", "relou")
-    );
-
-    return UserArray;
+function main(){
+    User.setMocksUser();
+    var connexionButton = document.getElementById("submit");
+    connexionButton.onclick = connexion;
 }
 
 function connexion() {
-    let UserArray = getUserArray();
+    let UserArray = User.getUsers();
     let reconnu = false;
     let valide = false;
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
+
+    var user;
 
     UserArray.forEach(function(element){
         if (username === element.username) {
             reconnu = true;
             if (password === element.password){
                 valide = true;
+                user = element;
             }
         }
     });
 
-    if (reconnu === true){
-        if (valide === true) {
-            document.getElementById("info").textContent = "Vous êtes identifié";
-            document.cookie = "username="+username;
-            document.cookie = "connected=true";
-            document.location.href="index.html";
-        } else {
-            document.getElementById("info").textContent = "Mauvais mot de passe";
-            document.getElementById("password").value = "";
-        }
-    } else {
+    if(!reconnu){
         document.getElementById("info").textContent = "Identifiants inconnus";
         document.getElementById("username").value = "";
         document.getElementById("password").value = "";
+        return;
     }
+
+    if(!valide){
+        document.getElementById("info").textContent = "Mauvais mot de passe";
+        document.getElementById("password").value = "";
+        return;
+    }
+
+    document.getElementById("info").textContent = "Vous êtes identifié";
+    User.setLoggedUser(user);
+    document.location.href="index.html";
+        
 }
+
+
+window.onload = function () {
+    main();
+};
