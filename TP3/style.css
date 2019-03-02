@@ -272,18 +272,22 @@ input[type=submit]:disabled,
     width: 10%;
     height: auto;
     align-self: center;
+    margin-left: 3%;
 }
-.order-right {
+.order-left {
     display: flex;
 }
 
 .order-text{
-    padding: auto;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .order-price {
     justify-self: flex-end;
     background-color: #3AB2A4;
+    padding-right: 3%;
+    padding-left: 3%;
 }
 
 .orders {
@@ -291,4 +295,8 @@ input[type=submit]:disabled,
     margin-left: 10%;
     margin-right: 10%;
     padding: 0;
+}
+
+.centered {
+    text-align: center;
 }
