@@ -1,7 +1,7 @@
 import {User} from "../models/user.js";
 
 function main(){
-
+    console.log('test')
     var loggedUser = User.getLoggedUser();
     if(loggedUser== null) location.href = "connexion.html";
 
@@ -15,6 +15,4 @@ function main(){
 
 }
 
-window.onload = function () {
-    main();
-};
+window.addEventListener("load", main);
