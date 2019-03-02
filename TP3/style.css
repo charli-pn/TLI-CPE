@@ -261,3 +261,42 @@ input[type=submit]:disabled,
     border-radius: 3px;
     background-color: #3AB2A4;
 }
+.order-info{
+    display: flex;
+    border: solid 0.5px;
+    justify-content: space-evenly;
+}
+
+.order-image {
+    border-radius: 50%;
+    width: 10%;
+    height: auto;
+    align-self: center;
+    margin-left: 3%;
+}
+.order-left {
+    display: flex;
+}
+
+.order-text{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.order-price {
+    justify-self: flex-end;
+    background-color: #3AB2A4;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.orders {
+    border: solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+}
+
+.centered {
+    text-align: center;
+}
