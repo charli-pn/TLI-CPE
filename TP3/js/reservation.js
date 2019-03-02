@@ -205,7 +205,6 @@ function testFormValidity() {
         var days = differenceBetweenTwoDateInDays(dateDepart, dateRetour);
         var totalPrice = selectedVoyage.getTotalPrice(days, adultNumber, childNumber, breakfast);
 
-        document.cookie = totalPrice;
         champTotalPrice.innerHTML = "Prix total: "+totalPrice;
     } else {
         champTotalPrice.innerHTML = "";
@@ -244,14 +243,15 @@ function submitForm(){
     var breakfast = champBreakfast.checked;
 
     var voyage = selectedVoyage;
-
-    var orderId = 0;
-    var userId = 0;
+    var days = differenceBetweenTwoDateInDays(dateDepart, dateRetour);
+    var totalPrice = selectedVoyage.getTotalPrice(days, adultNumber, childNumber, breakfast);
 
     var request = champDemande.value;
 
-    var order = new Order(voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request);
+    var order = new Order(voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request, totalPrice);
 
     Order.addOrder(order);
+
+    location.href = "recap.html";
 
 }
