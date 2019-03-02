@@ -37,7 +37,7 @@ class User {
 
     //Ajout de quelques users au localStorage
     static setMocksUser(){
-        User.addUser(new User("test", "test"));
+        User.addUser(new User("usr", "pwd"));
         User.addUser(new User("toto", "tata"));
         User.addUser(new User("foo", "bar"))
     }
