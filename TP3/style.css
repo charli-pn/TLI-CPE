@@ -51,13 +51,15 @@ nav {
     justify-content: center;
 }
 
-nav a {
+nav a, nav button {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
     background-color: #91FFF1;
     color: #3AB2A4
 }

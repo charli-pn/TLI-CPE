@@ -1,10 +1,12 @@
+import {User} from "./user.js";
+
 class Order {
 
 
     constructor(orderId, userId, voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request){
 
         this.orderId = Order.getNextId();
-        this.userId = userId;
+        this.userId = User.getLoggedUser().userId;
         this.voyage = voyage;
         this.customer = customer;
         this.dateDepart = dateDepart;

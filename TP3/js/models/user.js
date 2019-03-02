@@ -37,15 +37,9 @@ class User {
 
     //Ajout de quelques users au localStorage
     static setMocksUser(){
-
-        var mockUserArray = [];
-
-        mockUserArray.push(new User("test", "test"));
-        mockUserArray.push(new User("toto", "tata"));
-        mockUserArray.push(new User("foo", "bar"))
-
-        localStorage.setItem("usersArray", JSON.stringify(mockUserArray));
- 
+        User.addUser(new User("test", "test"));
+        User.addUser(new User("toto", "tata"));
+        User.addUser(new User("foo", "bar"))
     }
 
     static setLoggedUser(user){

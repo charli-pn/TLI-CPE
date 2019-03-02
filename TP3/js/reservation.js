@@ -250,7 +250,7 @@ function submitForm(){
 
     var request = champDemande.value;
 
-    var order = new Order(orderId, userId, voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request);
+    var order = new Order(voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request);
 
     Order.addOrder(order);
 

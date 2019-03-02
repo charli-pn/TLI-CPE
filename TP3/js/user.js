@@ -1,7 +1,8 @@
 import { User } from './models/User.js';
 
 function main(){
-    User.setMocksUser();
+    console.log(User.getUsers());
+    (User.getUsers().length == 0) ? User.setMocksUser() : "";
     var connexionButton = document.getElementById("submit");
     connexionButton.onclick = connexion;
 }
