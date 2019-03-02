@@ -300,3 +300,16 @@ input[type=submit]:disabled,
 .centered {
     text-align: center;
 }
+.suppression {
+    text-decoration: none;
+    color: #fff;
+    background-color: #FFAB86;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
