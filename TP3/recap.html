@@ -9,44 +9,60 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="contact.html">A propos</a>
-        </nav>
+<header>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">A propos</a>
+    </nav>
 
-        <h1>TTA - Time travel Agency</h1>
-        <p>Des voyages à tout moment !</p>
-    </header>
+    <h1>TTA - Time travel Agency</h1>
+    <p>Des voyages à tout moment !</p>
+</header>
 
-    <div class="card">
-        <h1>Résumé de votre réservation:</h1>
-        <p>Prénom: <span id="firstName"></span></p>
-        <p>Nom: <span id="name"></span></p>
-        <p>Email: <span id="email"></span></p>
-        <p>PhoneNumber: <span id="phoneNumber"></span></p>
-
-        <p>Depart: <span id="depart"></span></p>
-        <p>Retour: <span id="retour"></span></p>
-
-        <p>Nombre d'adultes: <span id="adultNumber"></span></p>
-        <p>Nombre d'enfants: <span id="childNumber"></span></p>
-
-        <p>Petit déj: <span id="breakfast"></span></p>
-        <p>demande: <span id="demande"></span></p>
-
-        <p>Prix total: <span id="totalPrice"></span></p>
-    </div>
-    <footer>
-        <div>
-            <p>Auteurs</p>
-            <div class="liste">
-                <a href="#">Charlotte Pineau</a>
-                <a href="#">Kilian Decaderincourt</a>
-            </div>
+<div class="card-recap">
+    <h1>Résumé de votre réservation:</h1>
+    <div class="teal">
+        <div class="row">
+            <p class="s6">Prénom: <span id="firstName"></span></p>
+            <p class="s6">Nom: <span id="name"></span></p>
         </div>
-        <p>Cours de TLI - TP 1</p>
-    </footer>
+        <div class="row">
+            <p class="s6">Email: <span id="email"></span></p>
+            <p class="s6">Tel: <span id="phoneNumber"></span></p>
+        </div>
+    </div>
+    <br>
+    <div class="teal">
+        <div class="row">
+            <p class="s6">Depart: <span id="depart"></span></p>
+            <p class="s6">Retour: <span id="retour"></span></p>
+        </div>
+    </div>
+    <br>
+    <div class="teal">
+        <div class="row">
+            <p>Nombre d'adultes: <span id="adultNumber"></span></p>
+            <p>Nombre d'enfants: <span id="childNumber"></span></p>
+            <p>Petit déj: <span id="breakfast"></span></p>
+        </div>
+    </div>
+    <br>
+    <div class="teal">
+        <p>Demande: <span id="demande"></span></p>
+    </div>
+
+    <p class="teal">Prix total: <span id="totalPrice"></span></p>
+</div>
+<footer>
+    <div>
+        <p>Auteurs</p>
+        <div class="liste">
+            <a href="#">Charlotte Pineau</a>
+            <a href="#">Kilian Decaderincourt</a>
+        </div>
+    </div>
+    <p>Cours de TLI - TP 1</p>
+</footer>
 </body>
 
 <script type="module" src="js/recap.js"></script>

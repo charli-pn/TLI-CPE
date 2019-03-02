@@ -313,3 +313,16 @@ input[type=submit]:disabled,
     text-transform: uppercase;
     margin-bottom: 5%;
 }
+
+.card-recap {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 5px 5px gray;
+    width: 50%;
+    margin-bottom: 30px;
+    margin-left: 25%;
+    border-radius: 3px;
+}
