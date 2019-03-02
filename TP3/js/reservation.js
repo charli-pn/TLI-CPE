@@ -1,5 +1,6 @@
-import { Customer } from 'models/Customer';
-import { Order } from 'models/Order';
+import { Customer } from './models/Customer.js';
+import { Order } from './models/Order.js';
+import { Voyage } from './Voyage.js';
 
 // Formulaire
 var formIsValid = false;
@@ -47,6 +48,7 @@ var submitBtn;
 
 // Voyage selectionné
 var selectedVoyage;
+var champTotalPrice;
 
 window.onload = function () {
     main();
@@ -65,7 +67,7 @@ function main() {
     champBreakfast = document.getElementById('breakfast');
     champDemande = document.getElementById('demande');
 
-    var totalPrice = document.getElementById('totalPrice');
+    champTotalPrice = document.getElementById('totalPrice');
 
     submitBtn = document.getElementById('submit');
     voyageTitle = document.getElementById("voyageTitle");
@@ -75,7 +77,7 @@ function main() {
     // On récupère l'id du voyage selectioné dans l'url
     let voyageId = new URLSearchParams(window.location.search).get("voyageId");
     if (voyageId === null) voyageId = 0;
-    let voyageArray = getVoyageArray();
+    let voyageArray = Voyage.getVoyageArray();
 
     selectedVoyage = voyageArray[voyageId];
 
@@ -119,6 +121,7 @@ function main() {
     }
 
     champRetour.onchange = () => {
+        champDepart.dispatchEvent(new Event("change"))
         champRetour.classList.remove("valid");
         champRetour.classList.remove("invalid");
         testDepartRetourValidity();
@@ -171,10 +174,14 @@ function testDepartRetourValidity() {
         return;
     }
 
-
-    if (dateDepart >= dateRetour) {
+    
+    if (dateDepart > dateRetour) {
         // La date de départ est après la date de retour
-        dateAreValid = false;
+        return;
+    }
+
+    if(differenceBetweenTwoDateInDays(dateDepart, dateRetour)==0){
+        return;
     }
 
     dateAreValid = true;
@@ -187,14 +194,26 @@ function testFormValidity() {
 
 
     if(formIsValid){
-        let totalPrice = getPrice();
+
+        var dateDepart = new Date(champDepart.value);
+        var dateRetour = new Date(champRetour.value);
+
+        var adultNumber = champAdultNumber.value;
+        var childNumber = champChildNumber.value;
+        var breakfast = champBreakfast.checked;
+    
+        var days = differenceBetweenTwoDateInDays(dateDepart, dateRetour);
+        var totalPrice = selectedVoyage.getTotalPrice(days, adultNumber, childNumber, breakfast);
+
         document.cookie = totalPrice;
-        totalPrice.innerHTML = "Prix total: "+totalPrice;
+        champTotalPrice.innerHTML = "Prix total: "+totalPrice;
     } else {
-        totalPrice.innerHTML = "";
+        champTotalPrice.innerHTML = "";
     }
 
 }
+
+
 
 function emitChangeOnFormElement() {
     // On provoque l'emission d'un event change manuellement sur certains champs
@@ -218,18 +237,21 @@ function submitForm(){
 
     let customer = new Customer(name, firstName, email, phone);
 
-    let dateDepart = new Date(champDepart.value);
-    let dateRetour = new Date(champRetour.value);
-    let adultNumber = champAdultNumber.value;
-    let childNumber = champChildNumber.value;
-    let breakfast = champBreakfast.checked;
+    var dateDepart = new Date(champDepart.value);
+    var dateRetour = new Date(champRetour.value);
+    var adultNumber = champAdultNumber.value;
+    var childNumber = champChildNumber.value;
+    var breakfast = champBreakfast.checked;
 
-    let voyage = selectedVoyage;
+    var voyage = selectedVoyage;
 
-    //todo créer l'order
-    //let order = new Order();
+    var orderId = 0;
+    var userId = 0;
 
-    
+    var request = champDemande.value;
 
+    var order = new Order(voyage, customer, dateDepart, dateRetour, adultNumber, childNumber, breakfast, request);
+
+    Order.addOrder(order);
 
 }
