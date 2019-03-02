@@ -35,8 +35,8 @@ function main(){
     champEmail.innerHTML = lastOrder.customer.email
     champPhoneNumber.innerHTML = lastOrder.customer.phoneNumber
 
-    champDepart.innerHTML = lastOrder.dateDepart
-    champRetour.innerHTML = lastOrder.dateRetour
+    champDepart.innerHTML = formatDate(lastOrder.dateDepart)
+    champRetour.innerHTML = formatDate(lastOrder.dateRetour)
     champAdultNumber.innerHTML = lastOrder.adultNumber
     champChildNumber.innerHTML = lastOrder.childNumber
     champBreakfast.innerHTML = lastOrder.breakfast ? "Oui" : "Non"
