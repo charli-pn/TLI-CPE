@@ -152,7 +152,7 @@ address a:hover {
 }
 
 /* Connexion */
-#connexion {
+#connexion, #inscription{
     padding: 20px;
     text-align: center;
     display: flex;
@@ -166,7 +166,8 @@ address a:hover {
     background-color: #FFAB86;
 }
 
-#connexion input[type=text], #connexion input[type=password]{
+#connexion input[type=text], #connexion input[type=password],
+#inscription input[type=text], #inscription input[type=password]{
     text-align: center;
 }
 
