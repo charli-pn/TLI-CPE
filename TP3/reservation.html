@@ -10,27 +10,34 @@
 </head>
 
 <body>
+
 <header>
     <nav>
-        <a href="index.html">Accueil</a>
-        <a href="contact.html">A propos</a>
+        <p>Bienvenue <span id="champUsername"></span></p>
+            <a href="index.html">Accueil</a>
+            <a href="orders.html">Mes commandes</a>
+            <a href="contact.html">A propos</a>
+            <button id="logout">Logout</button>
     </nav>
 
     <h1>TTA - Time travel Agency</h1>
     <p>Des voyages à tout moment !</p>
 </header>
-<form>
-    <h1 id="voyageTitle">Voyage selectionné: </h1>
-    <h1 id="voyagePrice">Prix par jour par adulte: </h1>
-    <fieldset>
-        <legend>Identité:</legend>
-        <div class="row">
-            <div class="s6">
-                <label for="name">Nom</label>
-                <br>
-                <input id="name" type="text" name="name" placeholder="Jean">
-                <br>
-                <br>
+
+   
+    <form>
+        <h1 id="voyageTitle">Voyage selectionné: </h1>
+        <h1 id="voyagePrice">Prix par jour par adulte: </h1>
+        <fieldset>
+            <legend>Identité:</legend>
+            <div class="row">
+                <div class="s6">
+                    <label for="name">Nom</label>
+                    <br>
+                    <input id="name" type="text" name="name" placeholder="Jean">
+                    <br>
+                    <br>
+                
             </div>
             <div class="s6">
                 <label for="firstName">Prenom</label>
