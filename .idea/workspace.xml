@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fc667f8-fce7-41d3-a551-c26b848024d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 1/cryptomonnaies.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 1/cryptomonnaies/ChromePhp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 1/cryptomonnaies/cryptomonnaies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/ajax/chat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/core/ChromePhp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/core/classes/Chat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/core/classes/Core.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/core/init.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP5/backend.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/css/chat_ajax.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TLI-CPE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TLI-CPE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,27 +18,45 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP5/Exercice 1/cryptomonnaies.html">
+        <entry file="file://C:/xampp/htdocs/TLI/chat_ajax/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state>
+              <caret selection-end-line="35" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TP5/Exercice 1/cryptomonnaies/cryptomonnaies.json">
+        <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="45">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TP5/Exercice 1/cryptomonnaies/ChromePhp.php">
+        <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/css/chat_ajax.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5559" />
+            <state relative-caret-position="306">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/xampp/htdocs/TLI/chat_ajax/css/chat_ajax.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TP1/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-459" />
           </provider>
         </entry>
       </file>
@@ -52,8 +65,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -85,6 +99,11 @@
         <option value="$PROJECT_DIR$/TP3/recap.html" />
         <option value="$PROJECT_DIR$/TP3/reservation.html" />
         <option value="$PROJECT_DIR$/TP5/Exercice 1/cryptomonnaies.html" />
+        <option value="C:/xampp/htdocs/TLI/chat_ajax/index.html" />
+        <option value="C:/xampp/htdocs/TLI/chat_ajax/css/chat_ajax.css" />
+        <option value="C:/xampp/htdocs/TLI/chat_ajax/js/chat_ajax.js" />
+        <option value="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/index.html" />
+        <option value="$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/css/chat_ajax.css" />
       </list>
     </option>
   </component>
@@ -112,6 +131,48 @@
               <item name="TLI-CPE" type="462c0819:PsiDirectoryNode" />
               <item name="TP5" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TLI-CPE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TLI-CPE" type="462c0819:PsiDirectoryNode" />
+              <item name="TP5" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercice 2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TLI-CPE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TLI-CPE" type="462c0819:PsiDirectoryNode" />
+              <item name="TP5" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercice 2" type="462c0819:PsiDirectoryNode" />
+              <item name="chat_ajax" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TLI-CPE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TLI-CPE" type="462c0819:PsiDirectoryNode" />
+              <item name="TP5" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercice 2" type="462c0819:PsiDirectoryNode" />
+              <item name="chat_ajax" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TLI-CPE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TLI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TLI-CPE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TLI" type="462c0819:PsiDirectoryNode" />
+              <item name="chat_ajax" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TLI-CPE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TLI" type="462c0819:PsiDirectoryNode" />
+              <item name="chat_ajax" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TLI-CPE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TLI" type="462c0819:PsiDirectoryNode" />
+              <item name="chat_ajax" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -121,11 +182,13 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/TLI" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\charl\OneDrive\Documents\GitHub\TLI-CPE\TP5\Exercice 2" />
       <recent name="C:\Users\charl\OneDrive\Documents\GitHub\TLI-CPE\TP3\js" />
     </key>
   </component>
@@ -156,21 +219,22 @@
       <workItem from="1551367763457" duration="3140000" />
       <workItem from="1551551234274" duration="10459000" />
       <workItem from="1551636845882" duration="2478000" />
-      <workItem from="1551703791090" duration="821000" />
+      <workItem from="1551703791090" duration="5421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30181000" />
+    <option name="totallyTimeSpent" value="34781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2631579" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -288,13 +352,6 @@
     <entry file="file://$PROJECT_DIR$/TP3/js/middleware/auth.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/TP3/connexion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-227">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TP3/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -347,6 +404,82 @@
     <entry file="file://$PROJECT_DIR$/TP5/Exercice 1/cryptomonnaies/ChromePhp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5559" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/core/init.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/core/classes/Core.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/core/classes/Chat.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/core/ChromePhp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6874" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP3/connexion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/ajax/chat.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/xampp/htdocs/TLI/chat_ajax/core/init.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/xampp/htdocs/TLI/chat_ajax/core/classes/Chat.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP1/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459" />
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/TLI/chat_ajax/ajax/chat.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP3/js/models/customer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/xampp/htdocs/TLI/chat_ajax/js/chat_ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/TLI/chat_ajax/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/TLI/chat_ajax/css/chat_ajax.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP5/Exercice 2/chat_ajax/css/chat_ajax.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
       </provider>
     </entry>
   </component>
