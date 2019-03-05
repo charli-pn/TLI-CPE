@@ -194,6 +194,10 @@ function drawSymbole(indexX, indexY) {
 
 function handleKey(event){
 
+  if (fini) {
+    return;
+  }
+
   var key = event.key;
 
   switch(key){
